@@ -4,8 +4,7 @@ class Form extends React.Component {
     render() {
         return (
             <div>
-                <h2>Content</h2>
-                <p>The content text!!!</p>
+                <h2>Form</h2>
             </div>
         );
     }
