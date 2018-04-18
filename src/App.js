@@ -3,8 +3,8 @@
 import React, { Component } from 'react';
 
 //Files imports
-import Card from './components/Card'
-import Form from './components/Form'
+import BookList from './containers/BookList'
+import SearchBar from './containers/SearchBar'
 
 //Style imports
 import logo from './logo.svg';
@@ -15,8 +15,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Card />
-        <Form />
+        <SearchBar />
+        <BookList />
+
       </div>
     );
   }
