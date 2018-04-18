@@ -14,7 +14,7 @@ class BookList extends React.Component {
         if (res) {
             let results = res.results.map((result) => {
                 return (
-                    <li>
+                    <li key={result.book_title}>
                         <div>
                             {result.book_title}
                         </div>

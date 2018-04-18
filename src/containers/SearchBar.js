@@ -21,7 +21,6 @@ class SearchBar extends React.Component {
     onFormSubmit(e) {
         e.preventDefault();
         this.props.fetchReview(this.state.author.replace(/ /g, "%20"));
-        console.log(this.state.author)
         this.setState({ term: "" });
     }
 
