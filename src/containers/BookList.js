@@ -37,7 +37,7 @@ class BookList extends React.Component {
             });
             return results
         }
-        else return null
+        else return (<p> Sorry, there's no review available for the moment ! </p>)
     };
 
 

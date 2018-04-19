@@ -28,7 +28,7 @@ class SearchBar extends React.Component {
             <div className="heightsetter">
                 <form onSubmit={this.onFormSubmit} className="input-group">
                     <input
-                        placeholder="Look for your book review"
+                        placeholder="Type an author's first and last name"
                         value={this.state.author}
                         onChange={this.onInputChange}
                         className="form-control form-control-lg"
