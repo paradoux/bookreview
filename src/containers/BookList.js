@@ -24,9 +24,10 @@ class BookList extends React.Component {
                                         </h1>
                                     </div>
                                     <div className="card-text">
-                                        Summary:
-                                        <br />
-                                        {result.summary}
+                                        {(!result.summary) ? (<p> No summary available, click to see the review </p>) :
+                                            (<p> Summary: </p> ,
+                                                result.summary)
+                                        }
                                     </div>
                                 </div>
                             </li>
