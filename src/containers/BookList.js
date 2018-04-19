@@ -14,9 +14,9 @@ class BookList extends React.Component {
         if (res) {
             let results = res.results.map((result) => {
                 return (
-                    <a href={result.url}>
+                    <a href={result.url} key={result.book_title} >
                         <div className="col-md-4">
-                            <li key={result.book_title} className="card">
+                            <li className="card">
                                 <div className="card-body">
                                     <div className="title-zone">
                                         <h1 className="card-title">
