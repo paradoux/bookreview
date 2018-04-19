@@ -1,5 +1,73 @@
+html{
+  height:100%;
+}
+
 body {
+  height: 100%;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+
+
+#root{
+  height: 100%;
+}
+
+.container{
+  height: 100%;
+}
+
+.heightsetter{
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul {
+  padding:0px;
+}
+
+li{
+height: 200px;
+
+}
+
+.card{
+  font-size: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  position: relative;
+  border: 0px;
+
+}
+
+.card h1{
+  font-size: 18px;
+  margin-top: 10px;
+
+}
+
+a, a:hover {
+  color: inherit;
+  text-decoration: inherit; 
+}
+
+.title-zone{
+  position: absolute;
+  bottom: 0px; 
+  height: 50px;
+  width: 100%;
+  background-color: rgba(233,233,233,233)
+}
+
+.card-text{
+  position: absolute;
+  bottom: 30%;
+  margin-left: 3px;
 }

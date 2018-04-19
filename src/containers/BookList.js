@@ -14,21 +14,29 @@ class BookList extends React.Component {
         if (res) {
             let results = res.results.map((result) => {
                 return (
-                    <li key={result.book_title}>
-                        <div>
-                            {result.book_title}
+                    <a href={result.url}>
+                        <div className="col-md-4">
+                            <li key={result.book_title} className="card">
+                                <div className="card-body">
+                                    <div className="title-zone">
+                                        <h1 className="card-title">
+                                            {result.book_title}
+                                        </h1>
+                                    </div>
+                                    <div className="card-text">
+                                        Summary:
+                                        <br />
+                                        {result.summary}
+                                    </div>
+                                </div>
+                            </li>
                         </div>
-                        <div>
-                            {result.summary}
-                        </div>
-                        <div>
-                            <a href={result.url}> Link to "{result.book_title}" review </a>
-                        </div>
-                    </li>)
+                    </a >
+                )
             });
             return results
         }
-        else return <li> Waiting for Author</li>
+        else return null
     };
 
 
@@ -37,7 +45,9 @@ class BookList extends React.Component {
         return (
             <div>
                 <ul>
-                    {this.renderReviews()}
+                    <div className="row">
+                        {this.renderReviews()}
+                    </div>
                 </ul>
             </div>
         )

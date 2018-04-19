@@ -14,9 +14,18 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div>
-        <SearchBar />
-        <BookList />
+      <div className="container">
+        <div className="row justify-content-md-center">
+          <div className="col-md-12">
+            <SearchBar />
+          </div>
+        </div>
+        <div className="row justify-content-md-center">
+
+          <div className="col-md-12">
+            <BookList />
+          </div>
+        </div>
 
       </div>
     );

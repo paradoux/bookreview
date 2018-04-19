@@ -14,29 +14,27 @@ class SearchBar extends React.Component {
     }
 
     onInputChange(e) {
-        //let input = e.target.value;
         this.setState({ author: e.target.value })
     }
 
     onFormSubmit(e) {
         e.preventDefault();
         this.props.fetchReview(this.state.author.replace(/ /g, "%20"));
-        this.setState({ term: "" });
+        this.setState({ author: '' });
     }
 
     render() {
         return (
-            <form onSubmit={this.onFormSubmit}>
-                <input
-                    placeholder="Chercher votre livre"
-                    value={this.state.author}
-                    onChange={this.onInputChange}
-
-                />
-                <span>
-                    <button type="submit"> Submit </button>
-                </span>
-            </form>
+            <div className="heightsetter">
+                <form onSubmit={this.onFormSubmit} className="input-group">
+                    <input
+                        placeholder="Look for your book review"
+                        value={this.state.author}
+                        onChange={this.onInputChange}
+                        className="form-control form-control-lg"
+                    />
+                </form>
+            </div>
         );
     }
 }
